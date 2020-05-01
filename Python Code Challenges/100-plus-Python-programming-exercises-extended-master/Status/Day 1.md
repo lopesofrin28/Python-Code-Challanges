@@ -9,7 +9,11 @@ between 2000 and 3200 (both included).The numbers obtained should be printed in 
 --------------------------------------
 ### Hints: 
 > ***Consider use range(#begin, #end) method.***
-
+nl=[]
+for x in range(2000, 3200):
+    if (x%7==0) and (x%5!=0):
+        nl.append(str(x))
+print (','.join(nl))
 ---------------------------------------
 
 -------------------------------
@@ -24,6 +28,13 @@ Then, the output should be:40320***
 --------------------
 ### Hints:
 >***In case of input data being supplied to the question, it should be assumed to be a console input.***
+
+n = int(input()) #input() function takes input as string type
+                #int() converts it to integer type
+fact = 1
+for i in range(1,n+1):
+    fact = fact * i
+print(fact)
 
 ---------------
 
@@ -45,7 +56,11 @@ Then, the output should be:40320***
 >***In case of input data being supplied to the question, it should be assumed to be a console input.Consider use dict()***
 
 -----------------
-
+n = int(input())
+ans = {}
+for i in range (1,n+1):
+    ans[i] = i * i
+print(ans)
 
 ----------------------------------
 

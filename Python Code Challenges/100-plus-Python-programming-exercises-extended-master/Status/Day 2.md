@@ -18,6 +18,15 @@
 ### Hints:
 >***In case of input data being supplied to the question, it should be assumed to be a console input.tuple() method can convert list to tuple***
 
+list1 = input().split(',')  # input is being taken as string and as it is string it has a built in
+                          # method name split. ',' inside split function does split where it finds any ','
+                          # and save the input as list in lst variable
+
+tuple1 = tuple(list1)          # tuple method converts list to tuple
+
+print(list1)
+print(tuple1)
+
 -----------------------
 
 --------------------------
@@ -35,6 +44,19 @@
 >***Use __init__ method to construct some parameters***
 
 ----------------------------------
+class IOstring():
+    def __init__(self):
+        pass
+
+    def getString(self):
+        self.s = input()
+
+    def printString(self):
+        print(self.s.upper())
+
+xx = IOstring()
+xx.getString()
+xx.printString()
 
 --------------------------
 # Question 6
@@ -63,6 +85,17 @@ Let us assume the following comma separated input sequence is given to the progr
 ### Hints:
 >***If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, it should be printed as 26).In case of input data being supplied to the question, it should be assumed to be a console input.***
 
+from math import * # importing all math functions
+
+C,H = 50,30
+
+def calc(D):
+    return sqrt((2*C*D)/H)
+
+D = input().split(',')                     # splits in comma position and set up in list
+D = [str(round(calc(int(i)))) for i in D]  # using comprehension method. It works in order of the previous code
+print(",".join(D))
+
 ----------------------------
 
 
@@ -86,6 +119,16 @@ Let us assume the following comma separated input sequence is given to the progr
 >***Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.***
 
 ------------------
+x,y = map(int,input().split(','))
+list1 = []
+
+for i in range(x):
+    tmp = []
+    for j in range(y):     
+        tmp.append(i*j)
+    list1.append(tmp)
+    
+print(list1)
 
 ---------------------------
 # Question 8
@@ -102,6 +145,9 @@ without,hello,bag,world
 ```
 bag,hello,without,world
 ```
+n=input().split(",")
+n.sort()
+print(",".join(n))
 
 ----------------------
 ### Hints:
@@ -131,7 +177,17 @@ PRACTICE MAKES PERFECT
 >***In case of input data being supplied to the question, it should be assumed to be a console input.***
 
 -------------------
+list1 = []
 
+while True:
+    x = input()
+    if len(x)==0:
+        break;
+    list1.append(x.upper())
+
+for line in list1:
+    print(line)
+    
 --------------------
 
 
